@@ -21,15 +21,16 @@ int main(void)
 				putchar((digit_2 % 10) + '0');
 				putchar((digit_3 % 10) + '0');
 
-				if (digit_1 < 7 || digit_2 < 8 || digit_3 < 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-
+				if (digit_1 == 7 && digit_2 == 8 && digit_3 == 9)
+					continue;
+				
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
+
+	putchar('\n');
 
 	return (0);
 }
