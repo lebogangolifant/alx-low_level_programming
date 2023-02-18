@@ -9,25 +9,25 @@
 
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int digit_1, digit_2, digit_3;
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	for (digit_1 = 0; digit_1 < 7; digit_1++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (digit_2 = digit_1 + 1; digit_2 < 8; digit_2++)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-			putchar((digit3 % 10) + '0');
-
-			if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+			for (digit_3 = digit_2 + 1; digit_3 < 9; digit_3++)
+			{
+				putchar('0' + digit_1);
+				putchar('0' + digit_2);
+				putchar('0' + digit_3);
+				if (digit_1 < 7 || digit_2 < 8 || digit_3 < 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
-
-	putchar('\n');
 
 	return (0);
 }
