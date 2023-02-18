@@ -17,20 +17,16 @@ int main(void)
 		{
 			for (digit_3 = digit_2 + 1; digit_3 < 9; digit_3++)
 			{
-				if (digit_1 == 7 && digit_2 == 8 && digit_3 == 9)
-				{
-					continue;
-				}
-
-				putchar(digit_1 + '0');
-				putchar(digit_2 + '0');
-				putchar(digit_3 + '0');
+				putchar(digit_1 + 48);
+				putchar(digit_2 + 48);
+				putchar(digit_3 + 48);
 
 				if (digit_1 < 7 || digit_2 < 8 || digit_3 < 9)
 				{
 					putchar(',');
 					putchar(' ');
 				}
+
 			}
 		}
 	}
