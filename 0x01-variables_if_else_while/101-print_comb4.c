@@ -17,9 +17,9 @@ int main(void)
 		{
 			for (digit_3 = digit_2 + 1; digit_3 < 10; digit_3++)
 			{
-				putchar(digit_1 + 48);
-				putchar(digit_2 + 48);
-				putchar(digit_3 + 48);
+				putchar((digit_1 % 10) + '0');
+				putchar((digit_2 % 10) + '0');
+				putchar((digit_3 % 10) + '0');
 
 				if (digit_1 < 7 || digit_2 < 8 || digit_3 < 9)
 				{
