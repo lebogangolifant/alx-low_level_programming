@@ -23,7 +23,6 @@ int main(void)
 
 				if (digit_1 == 7 && digit_2 == 8 && digit_3 == 9)
 					continue;
-				
 				putchar(',');
 				putchar(' ');
 			}
