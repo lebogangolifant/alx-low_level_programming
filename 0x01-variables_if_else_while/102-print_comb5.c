@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Prints all possible combinations of two two-digit numbers.
@@ -17,12 +18,12 @@ int main(void)
 		{
 			if (digit_1 <  digit_2)
 			{
-				putchar(digit_1 / 10 + '0');
-				putchar(digit_1 % 10 + '0');
+				putchar((digit_1 / 10) + 48);
+				putchar((digit_1 % 10) + 48);
 				putchar(' ');
-				putchar(digit_2 / 10 + '0');
-				putchar(digit_2 % 10 + '0');
-				if (digit_1 != 99 || digit_2 != 99)
+				putchar((digit_2 / 10) + 48);
+				putchar((digit_2 % 10) + 48);
+				if (digit_1 != 98 || digit_2 != 99)
 				{
 					putchar(',');
 					putchar(' ');
