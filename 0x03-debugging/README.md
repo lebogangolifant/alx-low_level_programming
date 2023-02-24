@@ -33,20 +33,8 @@ OR
 
 | TASK FILE                      | DESCRIPTION      | 
 |  -----------                   |  -----------     |
-|[0-main.c,]() | Test the function|
-|[main.h]()|Contains C function declarations and macro definitions to be shared between several source files|
-|[1-main.c]()|Comment out existing code.|
-|[2-largest_number.c]()|Fix the code so that it correctly prints out the largest of three numbers, no matter the case.|
-|[3-print_remaining_days.c]()|Fix the function so that the output works correctly for all dates and all leap years.|
-
-
-
-
-
-
-
-
-
-
-
-
+|[0-main.c,](https://github.com/lebogangolifant/alx-low_level_programming/blob/master/0x03-debugging/0-main.c) | Test the function|
+|[main.h](https://github.com/lebogangolifant/alx-low_level_programming/blob/master/0x03-debugging/main.h)|Contains C function declarations and macro definitions to be shared between several source files|
+|[1-main.c](https://github.com/lebogangolifant/alx-low_level_programming/blob/master/0x03-debugging/1-main.c)|Comment out existing code.|
+|[2-largest_number.c](https://github.com/lebogangolifant/alx-low_level_programming/blob/master/0x03-debugging/2-largest_number.c)|Fix the code so that it correctly prints out the largest of three numbers, no matter the case.|
+|[3-print_remaining_days.c](https://github.com/lebogangolifant/alx-low_level_programming/blob/master/0x03-debugging/3-print_remaining_days.c)|Fix the function so that the output works correctly for all dates and all leap years.|
