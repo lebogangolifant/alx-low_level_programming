@@ -3,16 +3,12 @@
 
 C programming language is a machine-independent programming language that is mainly used to create many types of applications and operating systems such as Windows, and other complicated programs such as the Oracle database, Git, Python interpreter, and games.
 
-## Resources
+## Concepts
 
-__read__ or __watch__:
-
-- [Nested while loops](https://intranet.alxswe.com/rltoken/Vg1zzzrxLhPh71405uggSg)
-
-OR  
-
-- Youtube 
-- Tutorial articles and more...
+- __Nested while loops__
+- __C - Functions__
+- __function prototype__
+- __C - Header Files__
 
 ## Requirements
 

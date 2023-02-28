@@ -3,16 +3,10 @@
 
 finding and fixing errors in software that prevents it from running correctly
 
-## Resources
+## Concepts
 
-__read__ or __watch__:
-
-- [Nested while loops](https://intranet.alxswe.com/rltoken/Vg1zzzrxLhPh71405uggSg)
-
-OR  
-
-- Youtube 
-- Tutorial articles and more...
+- __Debugging__
+- __Rubber Duck Debugging__
 
 ## Requirements
 

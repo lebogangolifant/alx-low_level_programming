@@ -2,14 +2,6 @@
 
 C programming language is a machine-independent programming language that is mainly used to create many types of applications and operating systems such as Windows, and other complicated programs such as the Oracle database, Git, Python interpreter, and games.
 
-## Resources
-
-__read__ or __watch__:
-
-- Learn [Why C Programming Is Awesome](https://intranet.alxswe.com/rltoken/WYdE1novaWa0yt5fzGvLBw)
-- Online tutorial articles
-- Youtube tutorials
-
 ## Project Objectives
 
 - Entry point
@@ -69,8 +61,9 @@ To run the Betty linter just with command `betty <filename>`:
 |  -----------                   |     -----------  |
 |1. __C - Hello, World__        | [0x00. C - Hello, World](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x00-hello_world)|
 |2. __Variables, if, else, while__ | [0x01. C - Variables, if, else, while](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x01-variables_if_else_while)|
-|3. __debugging__|[0x03-debugging](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x03-debugging)|
-|4. __more, functions, nested, loops__|[0x04-more-functions-nested-loops](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x04-more_functions_nested_loops)|
+|3. __C - Functions, nested loops__ |[0x02-functions_nested_loops](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x02-functions_nested_loops)|
+|4. __debugging__|[0x03-debugging](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x03-debugging)|
+|5. __more, functions, nested, loops__|[0x04-more-functions-nested-loops](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x04-more_functions_nested_loops)|
 
 
 

@@ -3,21 +3,17 @@
 
 C programming language is a machine-independent programming language that is mainly used to create many types of applications and operating systems such as Windows, and other complicated programs such as the Oracle database, Git, Python interpreter, and games.
 
-## Resources
+## Concepts
 
-__read__ or __watch__:
-
-- Learn [Why C Programming Is Awesome](https://intranet.alxswe.com/rltoken/WYdE1novaWa0yt5fzGvLBw)
-
-OR  
-
-- Youtube 
-- Tutorial articles and more...
-
-__man__ or __help__:
-
-- `ascii`
-- `scanf`, `getc`, `getchar`, `EOF`, `EXIT_SUCCESS`, `time`, `rand`, `srand`, `RAND_MAX`, `for` loops, `do...while` loops, functions.)
+- __Keywords and identifiers__
+- __integers__
+- __Arithmetic Operators in C__
+- __If statements in C__
+- __if…else statement__
+- __Relational operators__
+- __Logical operators__
+- __while loop in C__
+- __While loop__
 
 ## Requirements
 
