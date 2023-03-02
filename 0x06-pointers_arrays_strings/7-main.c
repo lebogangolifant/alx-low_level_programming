@@ -6,15 +6,13 @@
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.";
-    char *encoded_str = leet(str);
+    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char *p;
 
-    printf("%s\n", encoded_str);
-    printf("%s\n", encoded_str);
-
-    return 0;
+    p = leet(s);
+    printf("%s", p);
+    printf("%s", s);
+    return (0);
 }
-
