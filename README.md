@@ -64,7 +64,9 @@ To run the Betty linter just with command `betty <filename>`:
 |3. __C - Functions, nested loops__ |[0x02-functions_nested_loops](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x02-functions_nested_loops)|
 |4. __debugging__|[0x03-debugging](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x03-debugging)|
 |5. __more, functions, nested, loops__|[0x04-more-functions-nested-loops](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x04-more_functions_nested_loops)|
-
+|6. __C - Pointers, arrays and strings__|[0x05-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings)|
+|7. __C - More pointers, arrays and strings__|[0x06-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x06-pointers_arrays_strings)|
+|8. __C - Even more pointers, arrays and strings__|[0x07-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings)|
 
 
 
