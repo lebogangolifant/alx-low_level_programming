@@ -67,7 +67,7 @@ To run the Betty linter just with command `betty <filename>`:
 |6. __C - Pointers, arrays and strings__|[0x05-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings)|
 |7. __C - More pointers, arrays and strings__|[0x06-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x06-pointers_arrays_strings)|
 |8. __C - Even more pointers, arrays and strings__|[0x07-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings)|
-
+|9. __C - Recursion__|[0x08-recursion]()|
 
 
 
