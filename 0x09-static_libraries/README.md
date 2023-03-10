@@ -37,6 +37,10 @@ C programming language is a machine-independent programming language that is mai
 - convert c program function into object file
 
     ```
+    $ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 -c *.c
+
+	OR
+
     $ gcc -c uppercase.c -o uppercase.o 
     $ ls 
     uppercase.o
@@ -45,7 +49,11 @@ C programming language is a machine-independent programming language that is mai
 - convert all object file into static library 
  
     ```
-    $ ar rcs staticlib.a uppercase.o
+    $ ar -rc static_lib.a *.o
+
+	OR
+    
+    $ ar rcs static_lib.a uppercase.o
     $ ls 
     staticl_ib.a
     ```
