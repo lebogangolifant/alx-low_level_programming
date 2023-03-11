@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * @argc: Number of arguments passed to the program
- * @argv: Array of strings containing the arguments
+ * @argv: Array of strings containing arguments
  *
  * Return: 0
  */
@@ -17,4 +17,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
