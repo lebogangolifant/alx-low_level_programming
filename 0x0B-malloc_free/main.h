@@ -1,6 +1,7 @@
 #ifndef FILE_MAIN
 #define FILE_MAIN
 
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
