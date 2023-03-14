@@ -1,6 +1,69 @@
 #include "main.h"
 
 /**
+ * count_words - Count the number of words in a string
+ * @str: The string to count the words in
+ *
+ * Return: The number of words in the string
+ */
+
+static int count_words(char *str)
+{
+	int n_words = 0;
+	int in_word = 0;
+
+	while (*str)
+
+	{
+		if (*str == ' ')
+		{
+			in_word = 0;
+		} else if (!in_word)
+		{
+			in_word = 1;
+			n_words++;
+		}
+		str++;
+	}
+	return (n_words);
+}
+
+/**
+ * extract_word - Extract a word from a string
+ * @str: The string to extract the word from
+ *
+ * Return: A pointer to the extracted word
+ */
+
+static char *extract_word(char *str)
+{
+	char *start, *end, *word;
+	int i, len;
+
+
+	while (*str != '\0' && isspace(*str))
+		str++;
+
+
+	if (*str == '\0')
+		return (NULL);
+
+	start = str;
+	end = start;
+	while (*end != '\0' && !isspace(*end))
+		end++;
+
+	len = end - start;
+	word = (char *)malloc((len + 1) * sizeof(char));
+	if (word == NULL)
+		return (NULL);
+	for (i = 0; i < len; i++)
+		word[i] = start[i];
+	word[len] = '\0';
+	return (word);
+}
+
+/**
  * strtow - Splits a string into words.
  * @str: The string to split.
  *
@@ -10,39 +73,26 @@
 
 char **strtow(char *str)
 {
-	int i, j, k, n = 0, len = 0;
-	char **words;
+	int i;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
+	char **words = malloc(sizeof(char *) * (count_words(str) + 1));
 
-	for (i = 0; str[i]; i++)
-		len++;
-
-	words = malloc((len + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	i = 0;
+
+	while (*str != '\0')
 	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+		char *word = extract_word(str);
+
+		if (word != NULL)
 		{
-			for (j = i; str[j] && str[j] != ' '; j++)
-				n++;
-			words[k] = malloc((n + 1) * sizeof(char));
-			if (words[k] == NULL)
-			{
-				for (i = 0; i < k; i++)
-					free(words[i]);
-				free(words);
-				return (NULL);
-			}
-			for (j = i, n = 0; str[j] && str[j] != ' '; j++, n++)
-				words[k][n] = str[j];
-			words[k][n] = '\0';
-			k++;
+			words[i] = word;
+			i++;
 		}
+		str += strlen(word) + 1;
 	}
-	words[k] = NULL;
+	words[i] = (NULL);
 	return (words);
 }
