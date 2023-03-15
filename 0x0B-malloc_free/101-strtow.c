@@ -7,25 +7,28 @@
  * Return: The number of words in the string
  */
 
-static int count_words(char *str)
+int count_words(char *str)
 {
-	int n_words = 0;
-	int in_word = 0;
+	int count = 0;
 
 	while (*str)
-
 	{
-		if (*str == ' ')
+		while (*str && *str == ' ')
 		{
-			in_word = 0;
-		} else if (!in_word)
-		{
-			in_word = 1;
-			n_words++;
+			str++;
 		}
-		str++;
+
+		if (*str && *str != ' ')
+		{
+			count++;
+
+			while (*str && *str != ' ')
+			{
+				str++;
+			}
+		}
 	}
-	return (n_words);
+	return (count);
 }
 
 /**
@@ -90,13 +93,16 @@ char **strtow(char *str)
 		{
 			str++;
 		}
+
 		words[i] = extract_word(str);
+
 		if (words[i] == NULL)
 		{
 			for (i--; i >= 0; i--)
 			{
 				free(words[i]);
 			}
+
 			free(words);
 			return (NULL);
 		}
