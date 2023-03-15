@@ -37,9 +37,10 @@ static int count_words(char *str)
 
 static char *extract_word(char *str)
 {
-	char *start = str;
+	char *start;
 	char *word;
 
+	start = str;
 
 	while (*str && *str != ' ')
 	{
@@ -68,25 +69,41 @@ static char *extract_word(char *str)
 
 char **strtow(char *str)
 {
-	int i;
-	char **words = malloc(sizeof(char *) * (count_words(str) + 1));
+	int n_words, i;
+	char **words;
+
+	if (str == NULL || *str == '\0')
+	{
+		return (NULL);
+	}
+
+	n_words = count_words(str);
+
+	words = malloc((n_words + 1) * sizeof(char *));
 
 	if (words == NULL)
-		return (NULL);
-
-	i = 0;
-
-	while (*str != '\0')
 	{
-		char *word = extract_word(str);
-
-		if (word != NULL)
-		{
-			words[i] = word;
-			i++;
-		}
-		str += strlen(word) + 1;
+		return (NULL);
 	}
-	words[i] = NULL;
+
+	for (i = 0; i < n_words; i++)
+	{
+		while (*str && *str == ' ')
+		{
+			str++;
+		}
+		words[i] = extract_word(str);
+		if (words[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+			{
+				free(words[i]);
+			}
+			free(words);
+			return (NULL);
+		}
+		str += strlen(words[i]);
+	}
+	words[n_words] = NULL;
 	return (words);
 }
