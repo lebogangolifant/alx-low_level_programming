@@ -37,29 +37,24 @@ static int count_words(char *str)
 
 static char *extract_word(char *str)
 {
-	char *start, *end, *word;
-	int i, len;
+	char *start = str;
+	char *word;
 
 
-	while (*str != '\0' && isspace(*str))
+	while (*str && *str != ' ')
+	{
 		str++;
+	}
+	word = (char *)malloc((str - start + 1) * sizeof(char));
 
-
-	if (*str == '\0')
-		return (NULL);
-
-	start = str;
-	end = start;
-	while (*end != '\0' && !isspace(*end))
-		end++;
-
-	len = end - start;
-	word = (char *)malloc((len + 1) * sizeof(char));
 	if (word == NULL)
+	{
 		return (NULL);
-	for (i = 0; i < len; i++)
-		word[i] = start[i];
-	word[len] = '\0';
+	}
+	strncpy(word, start, str - start);
+
+	word[str - start] = '\0';
+
 	return (word);
 }
 
@@ -74,7 +69,6 @@ static char *extract_word(char *str)
 char **strtow(char *str)
 {
 	int i;
-
 	char **words = malloc(sizeof(char *) * (count_words(str) + 1));
 
 	if (words == NULL)
@@ -93,6 +87,6 @@ char **strtow(char *str)
 		}
 		str += strlen(word) + 1;
 	}
-	words[i] = (NULL);
+	words[i] = NULL;
 	return (words);
 }
