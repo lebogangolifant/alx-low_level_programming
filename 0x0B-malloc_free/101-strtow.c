@@ -69,8 +69,8 @@ static char *extract_word(char *str)
 
 char **strtow(char *str)
 {
-	int n_words, i;
 	char **words;
+	int n_words, i;
 
 	if (str == NULL || *str == '\0')
 	{
