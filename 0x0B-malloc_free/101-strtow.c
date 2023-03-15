@@ -37,10 +37,8 @@ static int count_words(char *str)
 
 static char *extract_word(char *str)
 {
-	char *start;
+	char *start = str;
 	char *word;
-
-	start = str;
 
 	while (*str && *str != ' ')
 	{
