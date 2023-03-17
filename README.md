@@ -68,8 +68,10 @@ To run the Betty linter just with command `betty <filename>`:
 |7. __C - More pointers, arrays and strings__|[0x06-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x06-pointers_arrays_strings)|
 |8. __C - Even more pointers, arrays and strings__|[0x07-pointers_arrays_strings](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings)|
 |9. __C - Recursion__|[0x08-recursion](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x08-recursion)|
-
-
+|10. __C - Static libraries__|[0x09-static_libraries](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x09-static_libraries)|
+|11. __C - argc, argv__|[0x0A-argc_argv](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0A-argc_argv)|
+|12. __C - malloc, free__|[0x0B-malloc_free](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0B-malloc_free)|
+|13. __C - More malloc, free__|[0x0C-more_malloc_free](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0C-more_malloc_free)|
 
 
 
