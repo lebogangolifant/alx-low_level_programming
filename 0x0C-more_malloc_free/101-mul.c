@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	num1 =atoi(argv[1]);
-	num2 =atoi(argv[2]);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
 
 	for (i = 1; i < argc; i++)
 	{
@@ -43,8 +43,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	/*num1 = atoi(argv[1]);*/
+
+	/*num2 = atoi(argv[2]);*/
 	result = multiply(num1, num2);
 	printf("%d\n", result);
 	return (0);
