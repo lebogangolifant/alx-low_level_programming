@@ -8,7 +8,7 @@
  * Return: the result of the multiplication
  */
 
-int multiply(int num1, int num2);
+long multiply(long num1, long num2);
 
 /**
  * main - Entry point of the program
@@ -21,7 +21,7 @@ int multiply(int num1, int num2);
 int main(int argc, char *argv[])
 {
 	int i, j;
-	int num1, num2, result;
+	long num1, num2, result;
 
 	if (argc != 3)
 	{
@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	num1 = atoll(argv[1]);
+	num2 = atoll(argv[2]);
 
 	for (i = 1; i < argc; i++)
 	{
@@ -43,11 +43,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	/*num1 = atoi(argv[1]);*/
 
-	/*num2 = atoi(argv[2]);*/
 	result = multiply(num1, num2);
-	printf("%d\n", result);
+	printf("%ld\n", result);
 	return (0);
 }
 
@@ -59,9 +57,9 @@ int main(int argc, char *argv[])
  * Return: the result of the multiplication
  */
 
-int multiply(int num1, int num2)
+long multiply(long num1, long num2)
 {
-	int result = 0;
+	long result = 0;
 
 	while (num2 > 0)
 	{
