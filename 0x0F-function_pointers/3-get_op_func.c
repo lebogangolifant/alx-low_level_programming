@@ -3,8 +3,11 @@
 /**
  * get_op_func - selects the correct function to perform the
  * operation asked by the user
- * @s: operator passed as argument to the program
- * Return: pointer to the corresponding function
+ * @s: the operator passed as argument to the program
+ *
+ * Return: a pointer to the function that corresponds to the operator
+ * given as a parameter. NULL if s does not match any of the 5 expected
+ * operators (+, -, *, /, %).
  */
 
 int (*get_op_func(char *s))(int, int)
@@ -17,7 +20,6 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-
 	int i = 0;
 
 	while (ops[i].op != NULL)
