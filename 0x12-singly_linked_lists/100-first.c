@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-/**
- * print_message - prints a message
- */
+void __attribute__((constructor)) print_message(void);
 
-void print_message(void) __attribute__((constructor));
+/**
+ * print_message - prints a message before the main function is executed
+ *
+ */
 
 void print_message(void)
 {
