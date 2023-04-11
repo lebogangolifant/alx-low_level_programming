@@ -51,8 +51,9 @@ void display_elf_header(char *filename)
 
 	printf("Class:                             %s\n",
 			header->e_ident[4] == 1 ? "ELF32" : "ELF64");
-	printf("Data:                              %s\n",
-			header->e_ident[5] == 1 ? "little endian" :
+	printf("Data:                              %s%s\n",
+			header->e_ident[5] == 1 ? "2's complement, " :
+			"", header->e_ident[5] == 1 ? "little endian" :
 			"big endian");
 	printf("Version:                           %d\n", header->e_ident[6]);
 	printf("OS/ABI:                            %d\n", header->e_ident[7]);
