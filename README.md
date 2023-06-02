@@ -72,9 +72,14 @@ To run the Betty linter just with command `betty <filename>`:
 |11. __C - argc, argv__|[0x0A-argc_argv](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0A-argc_argv)|
 |12. __C - malloc, free__|[0x0B-malloc_free](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0B-malloc_free)|
 |13. __C - More malloc, free__|[0x0C-more_malloc_free](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0C-more_malloc_free)|
-
-
-
+|14. __C - Preprocessor__|[0x0D-C_Preprocessor](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0D-preprocessor)|
+|15. __C - Structures, typedef__|[0x0E-Structures_typedef](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0E-structures_typedef)|
+|16. __C - Function pointers__|[0x0F-Function_pointers](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x0F-function_pointers)|
+|17. __C - Variadic functions__|[0x10-Variadic_functions](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x10-variadic_functions)|
+|18. __C - Singly linked lists__|[0x12-Singly_linked_lists](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x12-singly_linked_lists)|
+|19. __C - More singly linked lists__|[0x13-More_singly_linked_lists](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x13-more_singly_linked_lists)|
+|20. __C - Bit manipulation__|[0x14-Bit_manipulation](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x14-bit_manipulation)|
+|20. __C - File I/O__|[0x15-File_I/O](https://github.com/lebogangolifant/alx-low_level_programming/tree/master/0x15-file_io)|
 
 
 ## Acknowledgements
