@@ -1,6 +1,5 @@
 #!/bin/bash
-cd src
-gcc -c -Wall -Werror -fpic *.c -o ../build/*.o
-cd ../build
-gcc -shared -o liball.so *.o
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+directory=$(dirname "$0")
+gcc -c -Wall -Werror -fpic "$directory"/*.c
+gcc -shared -o "$directory/liball.so" "$directory"/*.o
+rm "$directory"/*.o
