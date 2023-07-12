@@ -32,6 +32,50 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
+ * add_node_sorted - Adds a node to the sorted linked list
+ * @ht: The sorted hash table
+ * @node: The node to add
+ */
+
+void add_node_sorted(shash_table_t *ht, shash_node_t *node)
+{
+	shash_node_t *temp;
+
+	if (ht->shead == NULL)
+	{
+		node->sprev = NULL;
+		node->snext = NULL;
+		ht->shead = node;
+		ht->stail = node;
+	} else
+	{
+		temp = ht->shead;
+		while (temp != NULL && strcmp(node->key, temp->key) > 0)
+			temp = temp->snext;
+		if (temp == NULL)
+		{
+			node->sprev = ht->stail;
+			node->snext = NULL;
+			ht->stail->snext = node;
+			ht->stail = node;
+		} else if
+			(temp == ht->shead)
+			{
+				node->sprev = NULL;
+				node->snext = ht->shead;
+				ht->shead->sprev = node;
+				ht->shead = node;
+			} else
+			{
+				node->sprev = temp->sprev;
+				node->snext = temp;
+				temp->sprev->snext = node;
+				temp->sprev = node;
+			}
+	}
+}
+
+/**
  * shash_table_set - Adds or updates an element in a sorted hash table
  * @ht: The sorted hash table
  * @key: The key
@@ -70,41 +114,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	node->next = ht->array[idx];
 	ht->array[idx] = node;
 
-	if (ht->shead == NULL)
-	{
-		node->sprev = NULL;
-		node->snext = NULL;
-		ht->shead = node;
-		ht->stail = node;
-	}
-	else
-	{
-		temp = ht->shead;
+	add_node_sorted(ht, node);
 
-		while (temp != NULL && strcmp(node->key, temp->key) > 0)
-			temp = temp->snext;
-
-		if (temp == NULL)
-		{
-			node->sprev = ht->stail;
-			node->snext = NULL;
-			ht->stail->snext = node;
-			ht->stail = node;
-		} else if
-			(temp == ht->shead)
-		{
-			node->sprev = NULL;
-			node->snext = ht->shead;
-			ht->shead->sprev = node;
-			ht->shead = node;
-		} else
-		{
-			node->sprev = temp->sprev;
-			node->snext = temp;
-			temp->sprev->snext = node;
-			temp->sprev = node;
-		}
-	}
 	return (1);
 }
 
