@@ -1,0 +1,8 @@
+# Makefile using specific variables for the compiler and source files
+
+CC = gcc
+SRC_DIR = src
+SRC = $(SRC_DIR)/main.c $(SRC_DIR)/school.c
+
+all:
+	$(CC) $(SRC) -o school
