@@ -1,6 +1,4 @@
 # Makefile for school executable
 
-all: school
-
-school: src/main.c src/school.c
+all: src/main.c src/school.c
 	gcc src/main.c src/school.c -o school
