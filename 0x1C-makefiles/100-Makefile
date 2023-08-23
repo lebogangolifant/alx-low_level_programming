@@ -1,4 +1,3 @@
-#!/usr/bin/make -f
 # Makefile for building, cleaning, and managing the executable file
 
 CC = gcc
@@ -6,28 +5,17 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
-RM = rm
+.PHONY:all clean oclean fclean re
 
-.PHONY: all clean oclean fclean re
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
-
-$(OBJ): %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -rf *~ $(NAME)
+	$(RM) *~ $(NAME)
 
-oclean:
-	$(RM) -rf $(OBJ)
+oclean: 
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
 re: oclean all
-
-$(shell find -name m.h) :
-	@echo "Header file m.h not found, stopping compilation."
-	@exit 1
