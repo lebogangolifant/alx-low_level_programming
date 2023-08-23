@@ -1,24 +1,28 @@
 # Makefile that includes compiler flags 
 
 CC = gcc
-SRC_DIR = src
-SRC = $(SRC_DIR)/main.c $(SRC_DIR)/school.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = rm
+RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+all: $(NAME)
 
-.PHONY: clean oclean fclean re
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-clean: 
-	$(RM) -rf *~ $(NAME)
+$(OBJ): $(SRC)
+	$(CC) $(CFLAGS) -c $*.c -o $@
 
-oclean: 
-	$(RM) -rf $(OBJ)
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
 re: oclean all
+
+.PHONY: clean oclean fclean re
