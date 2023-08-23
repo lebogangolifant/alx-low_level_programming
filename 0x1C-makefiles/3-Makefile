@@ -1,0 +1,28 @@
+# Makefile with specific rules for cleaning, object file management, and recompilation
+
+CC = gcc
+SRC_DIR = src
+SRC = $(SRC_DIR)/main.c $(SRC_DIR)/school.c
+OBJ = $(patsubst $(SRC_DIR)/%.c,%.o,$(SRC))
+NAME = school
+RM = rm
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: $(SRC_DIR)/%.c
+	$(CC) -c $< -o $@
+
+.PHONY: clean oclean fclean re
+
+clean: 
+	$(RM) -rf *~ $(NAME)
+
+oclean: 
+	$(RM) -rf $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
