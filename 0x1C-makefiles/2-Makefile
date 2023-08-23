@@ -1,8 +1,7 @@
 # Create a Makefile
 
 CC = gcc
-SRC_DIR = src
-SRC = ${SRC_DIR}/main.c ${SRC_DIR}/school.c
+SRC = main.c school.c
 OBJ = ${SRC:.c=.o}
 NAME = school
 
